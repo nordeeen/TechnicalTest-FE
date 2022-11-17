@@ -57,9 +57,11 @@ const UserLogin = () => {
               />
             )}
             <div className={classes.cut}></div>
-            <label for='firstname' className={classes.placeholder}>
-              username
-            </label>
+            {hide && (
+              <label for='firstname' className={classes.placeholder}>
+                username
+              </label>
+            )}
           </div>
           <div className={`${classes.inputContainer} ${classes.ic2}`}>
             {hide && (
@@ -74,7 +76,7 @@ const UserLogin = () => {
               />
             )}
             <div className={classes.cut}></div>
-            <label className={classes.placeholder}>password</label>
+            {hide && <label className={classes.placeholder}>password</label>}
           </div>
           <div className={`${classes.inputContainer} ${classes.ic2}`}>
             <div className={`${classes.cut} ${classes.cutShort}`}></div>
